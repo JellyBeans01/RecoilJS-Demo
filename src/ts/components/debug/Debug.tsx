@@ -3,7 +3,7 @@ import { useRecoilValue } from "recoil";
 import { displayDebugComponentsSelector } from "../../recoil/selectors/debugSelectors";
 import DebugObserver from "./DebugObserver";
 import DebugButton from "./DebugButton";
-import TimeTravelObserver from "./TimeTravelObserver";
+// import TimeTravelObserver from "./TimeTravelObserver";
 import ToggleDebugLogging from "./ToggleDebugLogging";
 
 const Debug: FC = () => {
@@ -16,7 +16,7 @@ const Debug: FC = () => {
             <DebugButton />
             <ToggleDebugLogging />
             <DebugObserver />
-            <TimeTravelObserver />
+            {/*<TimeTravelObserver />*/}
         </>
     );
 };

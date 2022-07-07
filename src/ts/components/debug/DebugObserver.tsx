@@ -18,8 +18,6 @@ const DebugObserver: FC = () => {
 
     useEffect(() => {
         if (enableLogging) {
-            console.log("The following items were modified");
-
             // Get a list of all modified items
             const nodes = snapshot.getNodes_UNSTABLE({ isModified: true });
 

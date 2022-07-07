@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import debugAtom from "../../recoil/atoms/debugAtom";
 import { enableLogsSelector } from "../../recoil/selectors/debugSelectors";
+import Button from "../Button";
 
 const ToggleDebugLogging: FC = () => {
     const [debug, setDebug] = useRecoilState(debugAtom);
@@ -11,11 +12,7 @@ const ToggleDebugLogging: FC = () => {
         setDebug({ ...debug, enableLogging: !debug.enableLogging });
     };
 
-    return (
-        <button type="button" onClick={onClick}>
-            {enableLogging ? "disable" : "enable"} Logging
-        </button>
-    );
+    return <Button label={`${enableLogging ? "disable" : "enable"} Logging`} onClick={onClick} />;
 };
 
 export default ToggleDebugLogging;
