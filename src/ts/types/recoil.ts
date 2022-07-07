@@ -1,11 +1,14 @@
 import { Filter, TodoItemType } from "./index";
 
 export enum StateKeys {
+    Auth = "auth",
     CharCount = "charCount",
     Debug = "debug",
     DebugComponents = "debugComponents",
     DebugLogging = "debugLogging",
     FilteredTodoList = "filteredTodoList",
+    User = "user",
+    UserName = "userName",
     Text = "text",
     TodoList = "todoList",
     TodoListFilter = "todoListFilter",

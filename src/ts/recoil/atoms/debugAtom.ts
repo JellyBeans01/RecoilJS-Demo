@@ -5,7 +5,7 @@ const debugAtom = atom<DebugStateType>({
     key: StateKeys.Debug,
     default: {
         displayDebugComponents: false,
-        enableLogging: false,
+        enableLogging: true,
     },
 });
 

@@ -4,19 +4,14 @@ import { RecoilRoot } from "recoil";
 import "./css/index.css";
 import App from "./ts/App";
 import reportWebVitals from "./reportWebVitals";
-import ToggleDebugButton from "./ts/components/debug/ToggleDebugButton";
 import Debug from "./ts/components/debug/Debug";
+import { isDev } from "./ts/resources/utils";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
     <React.StrictMode>
         <RecoilRoot>
-            {process.env.NODE_ENV === "development" && (
-                <>
-                    <ToggleDebugButton />
-                    <Debug />
-                </>
-            )}
+            {isDev() && <Debug />}
             <App />
         </RecoilRoot>
     </React.StrictMode>,

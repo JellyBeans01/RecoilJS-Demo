@@ -18,3 +18,5 @@ export const updateItemInList = <T extends BaseType>(item: T, list: T[]): T[] =>
 
     return listCopy;
 };
+
+export const isDev = (): boolean => process.env.NODE_ENV === "development";
