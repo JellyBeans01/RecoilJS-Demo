@@ -2,10 +2,16 @@
   "name": "recoiljs-demo",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "jelle.biesemans@iodigital.com",
+    "name": "Jelle Biesemans",
+    "url": "https://github.com/JellyBeans01"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "recoil": "^0.7.4",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },

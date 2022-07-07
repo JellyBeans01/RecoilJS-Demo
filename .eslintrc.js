@@ -177,7 +177,12 @@ module.exports = {
         "jsx-a11y/scope": "warn",
         "jsx-a11y/tabindex-no-positive": "warn",
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                additionalHooks: "(useRecoilCallback|useRecoilTransaction_UNSTABLE)",
+            },
+        ],
         "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "@typescript-eslint/prefer-interface": 0,
         "@typescript-eslint/no-inferrable-types": ["error", { ignoreParameters: true, ignoreProperties: true }],

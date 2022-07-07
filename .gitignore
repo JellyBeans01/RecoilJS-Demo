@@ -3,7 +3,10 @@
 
 /build/
 /dist/
+
 /node_modules/
+
+.env
 
 /.pnp
 .pnp.js
