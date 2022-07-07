@@ -9,6 +9,7 @@ export enum StateKeys {
     Text = "text",
     TodoList = "todoList",
     TodoListFilter = "todoListFilter",
+    TodoListStats = "todoListStats",
 }
 
 export type DebugStateType = {

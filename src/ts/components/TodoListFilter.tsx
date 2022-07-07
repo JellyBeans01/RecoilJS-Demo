@@ -7,7 +7,7 @@ const TodoListFilter: FC = () => {
     const [filter, setFilter] = useRecoilState(todoListFilterAtom);
 
     return (
-        <div style={{ margin: "20px 0" }}>
+        <div style={{ paddingBottom: "15px" }}>
             <span>Filter: </span>
             <select value={filter} onChange={(evt) => setFilter(evt.target.value as Filter)}>
                 {Object.values(Filter).map((value) => (
