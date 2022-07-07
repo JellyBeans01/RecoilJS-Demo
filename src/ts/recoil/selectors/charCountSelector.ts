@@ -1,16 +1,16 @@
 import { selector } from "recoil";
-import { StateKeys } from "../stateKeys";
-import textState from "../atoms/textState";
+import textAtom from "../atoms/textAtom";
+import { StateKeys } from "../../types";
 
 // A selector represents a piece of derived state. Derived state is a transformation of state. You can think of derived
 // state as the output of passing state to a pure function that modifies the given state in some way
 
-const charCountState = selector({
+const charCountSelector = selector({
     key: StateKeys.CharCount,
     get: ({ get }) => {
-        const text = get(textState);
+        const text = get(textAtom);
         return text.length;
     },
 });
 
-export default charCountState;
+export default charCountSelector;
