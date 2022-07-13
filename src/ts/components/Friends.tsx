@@ -15,7 +15,7 @@ const Friends: FC = () => {
                 <Suspense fallback={<div>Loading...</div>}>
                     {!friendsList.length && <div>No friends yet!</div>}
                     {friendsList.map(({ id, name, username, email }) => (
-                        <div key={id} style={{ marginBottom: 10 }}>
+                        <div data-testid="friends" key={id} style={{ marginBottom: 10 }}>
                             <div style={{ textAlign: "left" }}>
                                 <span style={{ fontWeight: "bold" }}>{username}</span>
                                 <small> ({name})</small>

@@ -13,7 +13,15 @@ const TextInput: FC = () => {
         setText(value);
     };
 
-    return <input type="text" style={{ width: "250px" }} value={text} onChange={(evt) => onChange(evt.target.value)} />;
+    return (
+        <input
+            data-testid="input"
+            type="text"
+            style={{ width: "250px" }}
+            value={text}
+            onChange={(evt) => onChange(evt.target.value)}
+        />
+    );
 };
 
 export default TextInput;
