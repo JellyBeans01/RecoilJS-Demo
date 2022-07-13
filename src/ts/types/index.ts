@@ -10,6 +10,6 @@ export type TodoItemType = {
     isComplete: boolean;
 };
 
-export type UserType = { username: string; name: string };
+export type UserType = { id: number; username: string; name: string; email: string };
 
 export * from "./recoil";
