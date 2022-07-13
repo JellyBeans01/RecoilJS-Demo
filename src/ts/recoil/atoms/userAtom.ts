@@ -1,10 +1,10 @@
 import { atom } from "recoil";
 import { StateKeys } from "../../types";
+import { USER_ID } from "../../resources/constants";
 
-type UserType = { name: string; id: number };
-const userAtom = atom<UserType>({
+const userAtom = atom({
     key: StateKeys.User,
-    default: { name: "", id: 0 },
+    default: USER_ID,
 });
 
 export default userAtom;

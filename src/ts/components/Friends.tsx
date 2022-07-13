@@ -2,10 +2,11 @@ import React, { FC, Suspense } from "react";
 import { useRecoilValue } from "recoil";
 import ErrorBoundary from "./ErrorBoundary";
 import { friendsQuerySelector } from "../recoil/selectors/friendsSelectors";
-import { USER_ID } from "../resources/constants";
+import userAtom from "../recoil/atoms/userAtom";
 
 const Friends: FC = () => {
-    const friendsList = useRecoilValue(friendsQuerySelector(USER_ID));
+    const userId = useRecoilValue(userAtom);
+    const friendsList = useRecoilValue(friendsQuerySelector(userId));
 
     return (
         <>
@@ -13,8 +14,8 @@ const Friends: FC = () => {
             <ErrorBoundary fallbackLabel="Looks like we could not fetch your friends list...">
                 <Suspense fallback={<div>Loading...</div>}>
                     {!friendsList.length && <div>No friends yet!</div>}
-                    {friendsList.map(({ id, name, username, email }, idx) => (
-                        <div key={id} style={{ marginBottom: idx !== friendsList.length - 1 ? 10 : 0 }}>
+                    {friendsList.map(({ id, name, username, email }) => (
+                        <div key={id} style={{ marginBottom: 10 }}>
                             <div style={{ textAlign: "left" }}>
                                 <span style={{ fontWeight: "bold" }}>{username}</span>
                                 <small> ({name})</small>

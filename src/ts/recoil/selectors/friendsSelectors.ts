@@ -6,13 +6,9 @@ import endpoints from "../../resources/endpoints";
 export const friendsQuerySelector = selectorFamily<UserType[], number>({
     key: StateKeys.Friends,
     get: (userId) => async () => {
-        try {
-            const response = await fetch(endpoints.users);
-            const users: UserType[] = await response.json();
+        const response = await fetch(endpoints.users);
+        const users: UserType[] = await response.json();
 
-            return users.filter(({ id }) => id !== userId);
-        } catch (err) {
-            return [];
-        }
+        return users.filter(({ id }) => id !== userId);
     },
 });
