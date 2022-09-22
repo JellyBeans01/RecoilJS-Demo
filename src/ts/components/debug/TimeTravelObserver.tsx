@@ -28,7 +28,8 @@ const TimeTravelObserver: FC = () => {
                     <li key={`${snap.getID()}`}>
                         <button
                             onClick={() => {
-                                // Need to release the snapshot as it would trigger some browser errors and later on crash
+                                // Snapshots are only retained for the duration of the callback that obtained them.
+                                // To use them after that they should be explicitly retained
                                 release();
                                 goToSnapshot(snap);
                             }}

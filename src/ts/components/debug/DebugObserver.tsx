@@ -27,7 +27,7 @@ const DebugObserver: FC = () => {
 
             console.log("---------------------------------------------");
         }
-    }, [snapshot]);
+    }, [snapshot]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return null;
 };
